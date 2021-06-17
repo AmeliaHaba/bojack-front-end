@@ -1,0 +1,13 @@
+body {
+    background-image: url(images/bojack_banner.jpg);
+}
+#large-img {
+    background-image: url(images/bojack_banner.jpg);
+    height: 400px;
+    width: 1000px;
+    background-size: cover;
+}
+.row {
+    height: 400px;
+    width: 1000px;
+}
