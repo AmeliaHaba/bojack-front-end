@@ -1,13 +1,72 @@
-body {
-    background-image: url(images/bojack_banner.jpg);
+#giant {
+    width: 95%;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
 }
-#large-img {
-    background-image: url(images/bojack_banner.jpg);
-    height: 400px;
-    width: 1000px;
-    background-size: cover;
+
+.card {
+  width: 150px;
+  height: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:  0 50px 20px 40px;
 }
-.row {
-    height: 400px;
-    width: 1000px;
+
+.gridcontainer img{ 
+  display: block; 
+  height: 400px; 
+  width: 322px; 
+  object-fit: cover; 
+  object-position: center; 
+  margin-left: auto;
+  margin-right: auto;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.character-card {
+  border: "none";
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  transition-duration: 0.3s;
+}
+.character-card:hover {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  background-color: rgb(217, 217, 223);
+}
+button {
+  background-color: rgb(114, 113, 113); 
+  border: none;
+  border-width: 10px;
+  color: ghostwhite;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  transition-duration: 0.5s;
+}
+button:hover {
+  background-color: ghostwhite; 
+  box-shadow:  0 0 0 1px rgb(114, 113, 113);
+  color: rgb(114, 113, 113);
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.mood-btn {
+  margin-right: 5px;
 }
