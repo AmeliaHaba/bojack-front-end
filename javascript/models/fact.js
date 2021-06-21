@@ -9,7 +9,8 @@ class Fact {
 
     renderFact() {
         // const traitsButton = document.querySelector(".traits-btn")
-        const characterFactDiv = document.querySelector(".character-facts")
+        const characterFactDiv = document.getElementById(`${this.character_id}`)
+        console.log(characterFactDiv)
         const characterFactP = document.createElement("p")
 
         characterFactP.classList.add("fact")

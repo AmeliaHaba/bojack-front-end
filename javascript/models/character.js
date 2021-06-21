@@ -25,10 +25,33 @@ class Character {
         characterCardDiv.innerHTML += this.characterHTML()
 
         
-            const characterImgTag = document.querySelector(".character-image")
-            const characterMoodBtnTag = characterCardDiv.querySelector(".mood-btn")
-       
+        const characterImgTag = document.querySelector(".character-image")
+        const characterMoodBtnTag = characterCardDiv.querySelector(".mood-btn")
+        const characterTraitBtn = document.querySelector(".trait-btn")
         
+       
+        // if(this.mood === true) {
+        //     characterMoodBtnTag.style.backgroundColor = "red"
+        // } else {
+        //     characterMoodBtnTag.style.backgroundColor = "none"
+
+        // }
+
+
+        characterCardDiv.addEventListener("click", event => {
+           if (event.target.matches(".trait-btn")) {
+            console.log(event.target)
+
+           }
+
+      
+            
+         API.addFacts(characterCardDiv.id)
+            
+            
+
+           
+        })
 
         characterCollectionDiv.appendChild(characterCardDiv)
 

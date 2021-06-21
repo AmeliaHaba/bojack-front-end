@@ -28,21 +28,15 @@ document.addEventListener("DOMContentLoaded", function(){
             })
             if(myMood) {
                 characterMoodButton.style.backgroundColor = "red"
-
-            }
+            } 
+            // else {
+            // //     characterMoodButton.style.backgroundColor = "none"
+    
+            // // }
 
         }
 
-        if (event.target.matches(".trait-btn")) {
-
-            console.log(event.target)
-            const characterCard = event.target.closest(".character-card").id
-            const charId = event.target.dataset.id  
-            
-            API.addFacts(charId)
-            
-            
-        }
+    
 
     })
     
