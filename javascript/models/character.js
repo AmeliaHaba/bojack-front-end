@@ -41,21 +41,6 @@ class Character {
         }
 
 
-        // characterCardDiv.addEventListener("click", event => {
-        //    if (event.target.matches(".trait-btn")) {
-        //     console.log(event.target)
-
-        //    }
-
-      
-            
-        //  API.addFacts(characterCardDiv.id)
-            
-            
-
-           
-        // })
-
         characterCollectionDiv.appendChild(characterCardDiv)
 
     }
