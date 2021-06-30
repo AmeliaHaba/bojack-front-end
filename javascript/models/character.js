@@ -40,6 +40,7 @@ class Character {
         }
 
         characterCollectionDiv.appendChild(characterCardDiv)
+        
 
     }
 
