@@ -22,4 +22,5 @@ class Fact {
         
         characterFactDiv.appendChild(characterFactP)
     }
+    
 }
