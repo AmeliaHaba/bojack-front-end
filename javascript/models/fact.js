@@ -8,7 +8,6 @@ class Fact {
     }
 
     renderFact() {
-        // const traitsButton = document.querySelector(".traits-btn")
         if(document.querySelector(`#fact-${this.id}`)){
             return
         }
