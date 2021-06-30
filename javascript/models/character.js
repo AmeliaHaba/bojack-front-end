@@ -14,6 +14,9 @@ class Character {
 
     }
 
+    static findById(id){
+        return Character.all.find(character => character.id === parseInt(id))
+    }
 
     renderCharacter() {
         const characterCollectionDiv = document.querySelector(".grid-container")
@@ -21,37 +24,37 @@ class Character {
 
         characterCardDiv.classList.add("character-card")
         characterCardDiv.dataset.id = this.id
-        characterCardDiv.id = this.id
+        characterCardDiv.id = `character-${this.id}`
         characterCardDiv.innerHTML += this.characterHTML()
 
         
         const characterImgTag = document.querySelector(".character-image")
         const characterMoodBtnTag = characterCardDiv.querySelector(".mood-btn")
-        const characterTraitBtn = document.querySelector(".trait-btn")
+        const characterTraitBtn = characterCardDiv.querySelector(".trait-btn")
+        characterTraitBtn.addEventListener("click", API.addFacts)
         
-       
-        // if(this.mood === true) {
-        //     characterMoodBtnTag.style.backgroundColor = "red"
-        // } else {
-        //     characterMoodBtnTag.style.backgroundColor = "none"
+        if(this.mood === true) {
+            characterMoodBtnTag.style.backgroundColor = "red"
+        } else {
+            characterMoodBtnTag.style.backgroundColor = "rgb(114, 113, 113)"
 
-        // }
+        }
 
 
-        characterCardDiv.addEventListener("click", event => {
-           if (event.target.matches(".trait-btn")) {
-            console.log(event.target)
+        // characterCardDiv.addEventListener("click", event => {
+        //    if (event.target.matches(".trait-btn")) {
+        //     console.log(event.target)
 
-           }
+        //    }
 
       
             
-         API.addFacts(characterCardDiv.id)
+        //  API.addFacts(characterCardDiv.id)
             
             
 
            
-        })
+        // })
 
         characterCollectionDiv.appendChild(characterCardDiv)
 

@@ -6,15 +6,16 @@ document.addEventListener("DOMContentLoaded", function(){
     API.addCharacters()
     // if there is any event lsiteners that need to get appended to the apge if it loads, they should append here
     document.addEventListener("click", event => { event.preventDefault()
-        myMood = !myMood
         console.log(event.target)
         const characterMoodButton = event.target.closest(".character-card").querySelector(".mood-btn")
         // const characterImgTag = document.querySelector(".character-image")
         if (event.target.matches(".mood-btn")) {
-
+            // myMood = !myMood
+            // console.log(myMood)
             const id = event.target.dataset.id
+            const character = Character.findById(id)
             const charObj = {
-                mood: myMood 
+                mood: !character.mood
             }
             fetch (`http://localhost:3000/characters/${id}`, {
                     method: "PATCH", 
@@ -23,16 +24,18 @@ document.addEventListener("DOMContentLoaded", function(){
             })
 
             .then(response => response.json())
-            .then(updatedCharacter => {
+            .then(  (updatedCharacter) => {
+                const moodButton = document.querySelector(`.mood-btn[data-id="${updatedCharacter.id}"]`)
+                if(updatedCharacter.mood === true){
+                    moodButton.style.backgroundColor = "red"
+                }
+                else {
+                    moodButton.style.backgroundColor = "rgb(114, 113, 113)"
+                }
                 console.log(updatedCharacter)
             })
-            if(myMood) {
-                characterMoodButton.style.backgroundColor = "red"
-            } 
-            // else {
-            // //     characterMoodButton.style.backgroundColor = "none"
-    
-            // // }
+
+
 
         }
 

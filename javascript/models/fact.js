@@ -9,13 +9,16 @@ class Fact {
 
     renderFact() {
         // const traitsButton = document.querySelector(".traits-btn")
-        const characterFactDiv = document.getElementById(`${this.character_id}`)
+        if(document.querySelector(`#fact-${this.id}`)){
+            return
+        }
+        const characterFactDiv = document.getElementById(`character-${this.character_id}`)
         console.log(characterFactDiv)
         const characterFactP = document.createElement("p")
 
         characterFactP.classList.add("fact")
         characterFactP.dataset.id = characterFactDiv.id 
-        characterFactP.id = this.id 
+        characterFactP.id = `fact-${this.id}` 
         characterFactP.innerHTML = `${this.fact}`
         
         characterFactDiv.appendChild(characterFactP)
