@@ -27,8 +27,6 @@
   grid-template-columns: auto auto auto auto;
 }
 
-
-
 .character-card:hover {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -77,6 +75,7 @@ button {
   border-radius: 4px;
   transition-duration: 0.5s;
 }
+
 button:hover {
   background-color: ghostwhite; 
   box-shadow:  0 0 0 1px rgb(114, 113, 113);
