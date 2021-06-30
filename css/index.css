@@ -38,12 +38,6 @@
   background-color: rgb(217, 217, 223);
 }
 
-
-
- 
-
-
-
 #direction-container {
   align-content: center;
   padding: 75px 0px 125px 0px;
@@ -51,9 +45,7 @@
 }
 
 h2 {
-  /* font-family: ; */
   font-size: 40px;
-
 }
 
 h1 {
