@@ -27,7 +27,6 @@ class Character {
         characterCardDiv.id = `character-${this.id}`
         characterCardDiv.innerHTML += this.characterHTML()
 
-        
         const characterImgTag = document.querySelector(".character-image")
         const characterMoodBtnTag = characterCardDiv.querySelector(".mood-btn")
         const characterTraitBtn = characterCardDiv.querySelector(".trait-btn")
