@@ -11,6 +11,7 @@ class API {
             })
         }
 
+        
         static addFacts(event) {
             fetch (`http://127.0.0.1:3000/characters/${event.target.dataset.id}/facts`)
             .then(response => response.json())
