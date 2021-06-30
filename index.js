@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function(){
     document.addEventListener("click", event => { event.preventDefault()
         console.log(event.target)
         const characterMoodButton = event.target.closest(".character-card").querySelector(".mood-btn")
-        // const characterImgTag = document.querySelector(".character-image")
         if (event.target.matches(".mood-btn")) {
             // myMood = !myMood
             // console.log(myMood)
