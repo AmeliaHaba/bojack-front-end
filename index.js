@@ -9,8 +9,6 @@ document.addEventListener("DOMContentLoaded", function(){
         console.log(event.target)
         const characterMoodButton = event.target.closest(".character-card").querySelector(".mood-btn")
         if (event.target.matches(".mood-btn")) {
-            // myMood = !myMood
-            // console.log(myMood)
             const id = event.target.dataset.id
             const character = Character.findById(id)
             const charObj = {

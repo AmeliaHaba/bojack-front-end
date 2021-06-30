@@ -7,6 +7,7 @@ class Fact {
         this.renderFact()
     }
 
+    
     renderFact() {
         if(document.querySelector(`#fact-${this.id}`)){
             return
