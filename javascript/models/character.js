@@ -18,6 +18,7 @@ class Character {
         return Character.all.find(character => character.id === parseInt(id))
     }
 
+    
     renderCharacter() {
         const characterCollectionDiv = document.querySelector(".grid-container")
         const characterCardDiv = document.createElement("div")
