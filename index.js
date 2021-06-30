@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(){
     // first load our characters 
     // get fetch reqyest to back end to load the charactesr. This lives in API class
     API.addCharacters()
-    // if there is any event lsiteners that need to get appended to the apge if it loads, they should append here
+    // if there is any event listeners that need to get appended to the page if it loads, they should append here
     document.addEventListener("click", event => { event.preventDefault()
         console.log(event.target)
         const characterMoodButton = event.target.closest(".character-card").querySelector(".mood-btn")
