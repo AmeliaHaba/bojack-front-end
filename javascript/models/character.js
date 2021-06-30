@@ -13,7 +13,6 @@ class Character {
         this.renderCharacter()   
 
     }
-
     
     static findById(id){
         return Character.all.find(character => character.id === parseInt(id))
